@@ -24,8 +24,9 @@ public class Main {
                     break;
             }
             System.out.println("What you like to continue? Enter y/n ");
-            
+
             String exitWork = scanner.next();
+            
 
             if(exitWork != null && exitWork.length() > 0 && !exitWork.equalsIgnoreCase("y")) break;;
         }

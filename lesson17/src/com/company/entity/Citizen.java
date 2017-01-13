@@ -1,11 +1,6 @@
 package com.company.entity;
 
-/**
- * Created by java on 10.01.2017.
- */
-public class Citizen {
-
-    private Long id;
+public class Citizen extends Entity{
     private String fistName;
     private String lastName;
     private int age;
@@ -19,19 +14,11 @@ public class Citizen {
     }
 
     public Citizen(Long id, String fistName, String lastName, int age, Long streetId) {
-        this.id = id;
+        super(id);
         this.fistName = fistName;
         this.lastName = lastName;
         this.age = age;
         this.streetId = streetId;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getFistName() {
@@ -69,7 +56,7 @@ public class Citizen {
     @Override
     public String toString() {
         return "Citizen{" +
-                "id=" + id +
+                "id=" + getId() +
                 ", fistName='" + fistName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +

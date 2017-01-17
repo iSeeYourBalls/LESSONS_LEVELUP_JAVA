@@ -1,5 +1,8 @@
 package AutoSalon;
 
+import org.omg.CORBA.*;
+import org.omg.CORBA.Object;
+
 import java.util.Arrays;
 
 /**
@@ -23,5 +26,12 @@ public class Main {
 
         System.out.println(Arrays.toString(autoSalon.sortByFuelConsumption()));
         System.out.println(Arrays.toString(autoSalon.getCarsBySpeedRange(160, 220)));
+
+        for (Car car : cars){
+            car.stop();
+            car.beep();
+            car.drive();
+        }
     }
+
 }
